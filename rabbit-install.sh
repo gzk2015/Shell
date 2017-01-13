@@ -25,3 +25,6 @@ rabbitmq-server -detached
 rabbitmqctl add_user admin 111111				#新增用户并配置密码
 rabbitmqctl set_user_tags admin administrator		#给用户打标签
 rabbitmqctl  set_permissions -p "/" admin ".*" ".*" ".*"
+
+
+#test test
