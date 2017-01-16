@@ -5,7 +5,7 @@
 rpm -Uvh https://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 
 
-yum install erlang  epel-release -y 
+yum install epel-release -y 
 yum install socat -y
 
 #upload packages first
