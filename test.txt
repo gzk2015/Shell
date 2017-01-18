@@ -1,4 +1,4 @@
-git使用过程
+﻿git使用过程
 
 拉取代码 
 git clone
@@ -10,3 +10,5 @@ git clone
 3. git push origin master  #推送本地分支到远程服务器
 
 git fetch origin
+
+git删除本地文件后，从服务器上再重新拉取
