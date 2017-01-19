@@ -1,0 +1,37 @@
+.\test.txt: line 1: $'gitä½¿ç\224¨è¿\207ç¨\213': command not found
+.\test.txt: line 3: $'æ\213\211å\217\226ä»£ç \201': command not found
+You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive           initialize submodules in the clone
+    --recurse-submodules  initialize submodules in the clone
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --single-branch       clone only one branch, HEAD or --branch
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+
+.\test.txt: line 6: $'å½\223æ\234\211æ\226\207ä»¶ä¿®æ\224¹è¦\201æ\217\220äº¤ç\232\204æ\227¶å\200\231': command not found
+.\test.txt: line 8: 1.git: command not found
+.\test.txt: line 9: 2.: command not found
+.\test.txt: line 10: 3.: command not found
