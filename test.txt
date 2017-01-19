@@ -12,3 +12,5 @@ git clone
 git fetch origin
 
 git删除本地文件后，从服务器上再重新拉取
+
+git checkout .

@@ -5,7 +5,7 @@ import pika
 import sys
 
 credent=pika.PlainCredentials("admin","111111")
-conn_params = pika.ConnectionParameters("10.125.145.87" , credentials=credent, virtual_host="/test")
+conn_params = pika.ConnectionParameters("10.69.213.105" , credentials=credent, virtual_host="/test")
 conn = pika.BlockingConnection(conn_params)
 
 channel = conn.channel()
