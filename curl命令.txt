@@ -98,6 +98,7 @@ USING PASSWORDS
         curl ftp://name:passwd@machine.domain:port/full/path/to/file
  
    or specify them with the -u flag like
+   或者使用参数-u标记用户名参数，例：
  
         curl -u name:passwd ftp://machine.domain:port/full/path/to/file
  
@@ -124,10 +125,12 @@ USING PASSWORDS
  
    Curl also supports user and password in HTTP URLs, thus you can pick a file
    like:
- 
+	curl同样支持在http协议里使用用户名密码，所以可以像下例中获取一个文件：
+	例：
         curl http://name:passwd@machine.domain/full/path/to/file
  
    or specify user and password separately like in
+   或者用-u 指定用户名密码：
  
         curl -u name:passwd http://machine.domain/full/path/to/file
  
@@ -216,30 +219,35 @@ RANGES
         curl -r 0-99 ftp://www.get.this/README
  
 UPLOADING
+上传文件 
  
  FTP / FTPS / SFTP / SCP
  
   Upload all data on stdin to a specified server:
+  将标准输入的数据上传到远程服务器上的一个文件：
  
         curl -T - ftp://ftp.upload.com/myfile
  
   Upload data from a specified file, login with user and password:
+  登陆后将本地一个文件上传到远程服务器：
  
         curl -T uploadfile -u user:passwd ftp://ftp.upload.com/myfile
  
   Upload a local file to the remote site, and use the local file name at the remote
   site too:
+  上传本地文件到服务器，保持文件名不变：
  
         curl -T uploadfile -u user:passwd ftp://ftp.upload.com/
  
   Upload a local file to get appended to the remote file:
+  将本地文件的内容添加到远程服务器的一个某个文件中：
  
         curl -T localfile -a ftp://ftp.upload.com/remotefile
  
   Curl also supports ftp upload through a proxy, but only if the proxy is
   configured to allow that kind of tunneling. If it does, you can run curl in
   a fashion similar to:
- 
+  curl支持通过代理上传文件到ftp服务器：
         curl --proxytunnel -x proxy:port -T localfile ftp.upload.com
  
 SMB / SMBS
@@ -250,14 +258,15 @@ SMB / SMBS
  HTTP
  
   Upload all data on stdin to a specified HTTP site:
- 
+	将标准输入的数据上传到远程HTTP服务器上的一个文件：
         curl -T - http://www.upload.com/myfile
  
   Note that the HTTP server must have been configured to accept PUT before
   this can be done successfully.
+  注意：http服务器需要配置接受PUT方法，才能上传成功：
  
   For other ways to do HTTP data upload, see the POST section below.
- 
+	
 VERBOSE / DEBUG
  
   If curl fails where it isn't supposed to, if the servers don't let you in,
@@ -515,7 +524,7 @@ PROGRESS METER
   need much explanation!
  
 SPEED LIMIT
- 
+限速 
   Curl allows the user to set the transfer speed conditions that must be met
   to let the transfer keep going. By using the switch -y and -Y you
   can make curl abort transfers if the transfer speed is below the specified
