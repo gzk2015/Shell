@@ -28,7 +28,7 @@ def random_str(randomlength=1000):
 
 for i in range(1,20):
 
-	msg = random_str(20)
+	msg = random_str(200)
  #   msg=str(i)
 	msg_props = pika.BasicProperties()
 	msg_props.content_type="text/plain"
@@ -36,7 +36,7 @@ for i in range(1,20):
                       exchange="",
                       # properties=msg_props,
                       routing_key="hello")
-	print( "sent %s  " %msg)
+	print( "send %s  " %msg)
 
 	
 conn.close()
