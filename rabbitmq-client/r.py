@@ -4,8 +4,8 @@
 import pika
 import sys
 
-credent=pika.PlainCredentials("admin","111111")
-conn_params = pika.ConnectionParameters("10.69.213.105" , credentials=credent, virtual_host="/test")
+credent=pika.PlainCredentials("gadmin","123456")
+conn_params = pika.ConnectionParameters("10.125.145.83" , credentials=credent, virtual_host="/")
 conn = pika.BlockingConnection(conn_params)
 
 channel = conn.channel()
@@ -17,7 +17,7 @@ channel = conn.channel()
 
 #                         auto_delete=False)
 
-channel.queue_declare(queue="hello" ,durable=False,)
+channel.queue_declare(queue="hello" ,durable=True,)
 #channel.queue_bind(queue="test-queue",exchange="test-ex",routing_key="test-ex")
 
 #
