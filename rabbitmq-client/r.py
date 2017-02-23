@@ -4,8 +4,8 @@
 import pika
 import sys
 
-credent=pika.PlainCredentials("gadmin","123456")
-conn_params = pika.ConnectionParameters("10.125.145.83" , credentials=credent, virtual_host="/")
+credent=pika.PlainCredentials("gtadmin","123456")
+conn_params = pika.ConnectionParameters("10.125.145.81" , credentials=credent, virtual_host="/")
 conn = pika.BlockingConnection(conn_params)
 
 channel = conn.channel()
@@ -17,7 +17,7 @@ channel = conn.channel()
 
 #                         auto_delete=False)
 
-channel.queue_declare(queue="hello" ,durable=True,)
+channel.queue_declare(queue="qunide" ,durable=True,)
 #channel.queue_bind(queue="test-queue",exchange="test-ex",routing_key="test-ex")
 
 #
@@ -35,7 +35,7 @@ def callback( ch , method , properties , body):
 
 
 channel.basic_consume( callback,
-                        queue="hello",
+                        queue="qunide",
                         no_ack=True,
                         consumer_tag="test-consumer")
 
